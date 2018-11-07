@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="862.0" prefWidth="795.0" styleClass="mainFxmlClass" stylesheets="@main.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="com.kelompok.merah.form.ListtransaksiController">
+   <children>
+      <TableView fx:id="tblData" layoutX="40.0" layoutY="154.0" prefHeight="397.0" prefWidth="714.0">
+        <columns>
+          <TableColumn fx:id="clNo" prefWidth="161.0" text="Nomor Resi" />
+          <TableColumn fx:id="clNama" prefWidth="199.0" text="Nama Pengirim" />
+            <TableColumn fx:id="clKota" prefWidth="201.0" text="Kota Tujuan" />
+            <TableColumn fx:id="clTanggal" prefWidth="151.0" text="Tanggal" />
+        </columns>
+      </TableView>
+      <Label layoutX="40.0" layoutY="63.0" text="List Transaksi">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnLogout" layoutX="686.0" layoutY="28.0" mnemonicParsing="false" onAction="#prosesLogout" text="Logout" />
+      <Button fx:id="btnTransaksi" layoutX="40.0" layoutY="803.0" mnemonicParsing="false" onAction="#prosesTransaksi" prefHeight="27.0" prefWidth="714.0" text="Transaksi Baru" />
+   </children>
+</AnchorPane>

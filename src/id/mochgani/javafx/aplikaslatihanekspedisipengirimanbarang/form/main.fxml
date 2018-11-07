@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="862.0" prefWidth="795.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.kelompok.merah.form.MainController">
+    <stylesheets>
+        <URL value="@main.css" />
+    </stylesheets>
+   <children>
+      <Label layoutX="46.0" layoutY="27.0" text="Form Transaksi">
+         <font>
+            <Font size="25.0" />
+         </font></Label>
+      <Button fx:id="btnLogout" layoutX="686.0" layoutY="28.0" mnemonicParsing="false" onAction="#prosesLogout" text="Logout" />
+      <TitledPane animated="false" layoutX="46.0" layoutY="75.0" prefHeight="317.0" prefWidth="340.0" text="Data Pengirim">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="274.0" prefWidth="338.0">
+               <children>
+                  <Label layoutX="32.0" layoutY="21.0" text="Nama" />
+                  <Label layoutX="32.0" layoutY="84.0" text="No Telepon" />
+                  <Label layoutX="32.0" layoutY="147.0" text="Alamat" />
+                  <TextField fx:id="txtNamaPengirim" layoutX="31.0" layoutY="47.0" prefHeight="27.0" prefWidth="277.0" />
+                  <TextField fx:id="txtNoTeleponPengirim" layoutX="31.0" layoutY="110.0" prefHeight="27.0" prefWidth="277.0" />
+                  <TextArea fx:id="txtAlamatPengirim" layoutX="31.0" layoutY="173.0" prefHeight="90.0" prefWidth="277.0" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+      <TitledPane animated="false" layoutX="46.0" layoutY="402.0" prefHeight="374.0" prefWidth="340.0" text="Data Penerima">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="274.0" prefWidth="338.0">
+               <children>
+                  <Label layoutX="32.0" layoutY="21.0" text="Nama" />
+                  <Label layoutX="32.0" layoutY="84.0" text="No Telepon" />
+                  <Label layoutX="32.0" layoutY="211.0" text="Alamat" />
+                  <TextField fx:id="txtNamaPenerima" layoutX="31.0" layoutY="47.0" prefHeight="27.0" prefWidth="277.0" />
+                  <TextField fx:id="txtNoTeleponPenerima" layoutX="31.0" layoutY="110.0" prefHeight="27.0" prefWidth="277.0" />
+                  <TextArea fx:id="txtAlamatPenerima" layoutX="31.0" layoutY="238.0" prefHeight="90.0" prefWidth="277.0" />
+                  <Label layoutX="33.0" layoutY="147.0" text="Kota" />
+                  <ComboBox fx:id="cmdKota" layoutX="31.0" layoutY="174.0" prefHeight="27.0" prefWidth="277.0" />
+               </children>
+            </AnchorPane>
+         </content>
+      </TitledPane>
+      <TitledPane animated="false" layoutX="407.0" layoutY="75.0" prefHeight="519.0" prefWidth="340.0" text="Data Pengiriman">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="274.0" prefWidth="338.0">
+               <children>
+                  <Label layoutX="32.0" layoutY="21.0" text="Tipe Layanan" />
+                  <Label layoutX="32.0" layoutY="84.0" text="Jenis Barang" />
+                  <Label layoutX="32.0" layoutY="211.0" text="Keterangan Barang" />
+                  <TextField fx:id="txtBeratBarang" layoutX="31.0" layoutY="174.0" prefHeight="27.0" prefWidth="61.0" />
+                  <TextField fx:id="txtJenisBarang" layoutX="31.0" layoutY="110.0" prefHeight="27.0" prefWidth="277.0" />
+                  <TextArea fx:id="txtKeterangan" layoutX="31.0" layoutY="238.0" prefHeight="90.0" prefWidth="277.0" />
+                  <Label layoutX="33.0" layoutY="147.0" text="Berat Barang" />
+                  <ComboBox fx:id="cmdTipeLayanan" layoutX="31.0" layoutY="47.0" prefHeight="27.0" prefWidth="277.0" />
+                  <Label layoutX="34.0" layoutY="394.0" text="Total" />
+                  <TextField fx:id="txtTotal" layoutX="33.0" layoutY="420.0" prefHeight="27.0" prefWidth="277.0">
+                     <font>
+                        <Font size="22.0" />
+                     </font></TextField>
+                  <Label layoutX="98.0" layoutY="179.0" text="Kg" />
+                  <TextField fx:id="txtBiayaPerkilo" layoutX="142.0" layoutY="174.0" prefHeight="27.0" prefWidth="164.0" />
+                  <Label layoutX="144.0" layoutY="147.0" text="Biaya Perkilo" />
+               </children>
+            </AnchorPane>
+         </content>
+      </TitledPane>
+      <Button fx:id="btnProses" layoutX="407.0" layoutY="603.0" mnemonicParsing="false" onAction="#prosesTransaksi" prefHeight="47.0" prefWidth="340.0" text="Proses" />
+      <Button fx:id="btnCetak" layoutX="406.0" layoutY="667.0" mnemonicParsing="false" onAction="#prosesCetak" prefHeight="47.0" prefWidth="340.0" text="Cetak Resi" />
+      <Button fx:id="btnList" layoutX="407.0" layoutY="729.0" mnemonicParsing="false" onAction="#prosesList" prefHeight="47.0" prefWidth="340.0" text="List Data Transaksi" />
+   </children>
+</AnchorPane>
