@@ -1,2 +1,2 @@
 * linguist-vendored
-*.html linguist-language=Java
+*.java linguist-vendored=false
